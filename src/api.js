@@ -1,6 +1,6 @@
 const name = document.getElementById('user');
 const score = document.getElementById('score');
-const api = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/lR1m11mtj2PWF1nDJal8/scores';
+const api = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/eEzeWVrbEjHE7yHXAoXv/scores';
 
 const addData = async () => {
   const send = await fetch(api, {
