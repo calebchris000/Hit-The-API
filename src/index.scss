@@ -1,0 +1,158 @@
+$primary-color: #0074d9;
+$secondary-color: #000826;
+$white: #c2ecf2;
+$black: #000;
+
+body {
+  background-color: #021623;
+  background-image: url(./img.jpg);
+  background-size: cover;
+}
+
+body::before {
+  content: "";
+  position: absolute; /* Position the pseudo-element absolutely within the body */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 116, 217, 0.34);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.7px);
+  -webkit-backdrop-filter: blur(8.7px);
+  z-index: 0; /* Set the z-index to be */
+}
+
+#container {
+  display: flex;
+  justify-content: space-evenly;
+  height: 40vh;
+  align-items: center;
+  padding: 100px 10px;
+
+  /* From https://css.glass */
+  z-index: 3;
+}
+
+.scoreContainer {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  justify-content: center;
+  width: 25%;
+
+  /* From https://css.glass */
+  background: $secondary-color;
+  border-radius: 16px;
+  border: 1px solid rgba(0, 116, 217, 0.57);
+}
+
+.scoreContainer div {
+  height: 30px;
+  margin-top: 10px;
+  font-weight: 600;
+}
+
+.lists {
+  display: flex;
+  flex-direction: column;
+  padding: 0 10px;
+}
+
+.lists li {
+  position: relative;
+  top: 2px;
+  color: $secondary-color;
+  font-weight: 600;
+  list-style-type: none;
+  padding: 5px 20px;
+  margin-top: 10px;
+  border-radius: 16px;
+}
+
+.lists li:nth-child(odd) {
+  background-color: $white;
+  color: $black;
+}
+
+.lists li:nth-child(even) {
+  background-color: $primary-color;
+  color: $white;
+}
+
+h1 {
+  color: $white;
+  margin-left: 50px;
+}
+
+.reload {
+  height: 40px;
+}
+
+.addScore,
+.recentScores {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: $white;
+}
+
+.recentScores {
+  margin: 0;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  padding: 10px;
+  background: $secondary-color;
+  border-radius: 16px;
+  z-index: 2;
+}
+
+#user,
+#score {
+  font-family: "poppins", sans-serif;
+  height: 30px;
+  margin-top: 10px;
+  border: 2px solid $white;
+  background-color: $white;
+  color: $primary-color;
+  font-weight: 500;
+  border-radius: 16px;
+  text-indent: 20px;
+}
+
+#user::placeholder,
+#score::placeholder {
+  color: $secondary-color;
+  position: relative;
+  left: 10px;
+}
+
+#score::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+#user:focus,
+#score:focus {
+  outline: none;
+}
+
+#submit {
+  margin-top: 10px;
+  width: 30%;
+  height: 35px;
+  align-self: end;
+  background-color: $white;
+  border: none;
+  font-weight: 600;
+  font-family: "poppins", sans-serif;
+  border-radius: 16px;
+}
+
+#submit:active {
+  background-color: #005095;
+}
