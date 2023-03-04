@@ -1,12 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;500;600;700&display=swap");
+
 $primary-color: #0074d9;
 $secondary-color: #000826;
 $white: #c2ecf2;
 $black: #000;
+$font: "Poppins", san-serif;
 
 body {
   background-color: #021623;
   background-image: url(./img.jpg);
   background-size: cover;
+  font-family: $font;
 }
 
 body::before {
